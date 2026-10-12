@@ -421,7 +421,7 @@ private struct PortalRootView: View {
         do { catalog = try await PortalAPI.request("api/catalog", token: token) }
         catch {
             errorMessage = error.localizedDescription
-            if (error as? PortalError)?.localizedDescription?.contains("key") == true {
+            if (error as? PortalError)?.localizedDescription.contains("key") == true {
                 PortalAPI.saveToken(nil); self.token = nil
             }
         }
