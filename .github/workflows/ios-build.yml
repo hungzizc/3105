@@ -17,7 +17,6 @@ jobs:
           xcodebuild \
             -project ThreeOneOSFive.xcodeproj \
             -scheme 3105 \
-            -target 3105 \
             -configuration Debug \
             -sdk iphonesimulator \
             -derivedDataPath build/DerivedData \
